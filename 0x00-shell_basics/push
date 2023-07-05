@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Enter a commit message"
-read var
+#echo "Enter a commit message"
+#read var
 
 git add .
-git commit -m "${var}"
+git commit -m "tesst"
 git push
