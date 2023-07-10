@@ -1,2 +1,2 @@
 #!/bin/bash
-gerp -w -c bin /etc/passwd
+gerp -i  bin /etc/passwd
