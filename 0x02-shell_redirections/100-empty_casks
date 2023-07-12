@@ -1,2 +1,2 @@
 #!/bin/bash
-find.  −empty −print | xargs rm −rf  
+ls -l | find . -empty
