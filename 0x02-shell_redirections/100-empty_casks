@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l | find . -empty
+find . -empty -printf '%f\n'
