@@ -2,7 +2,7 @@
 # Displays information about the `school` file. 
 
 if [ -e ./school ]; then
-    echo "school file or directory exists"
+    echo "school file exists"
 
     if [ -s ./school ]; then
         echo "school file is not empty"
@@ -14,5 +14,5 @@ if [ -e ./school ]; then
         echo "school is a regular file"
     fi
 else
-    echo "school file or directory does not exist"
+    echo "school file does not exist"
 fi
