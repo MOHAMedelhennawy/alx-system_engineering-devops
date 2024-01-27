@@ -5,16 +5,11 @@
 
 hours=0
 while [[ $hours -le 13 ]]; do
-    while [[ $minutes -le 60 ]]; do
-        if [[ $minutes -eq 0 || $minutes -eq 60 ]]; then
-            if [ $hours -ne 13 ]; then
-                echo "Hour: $hours"
-            fi
-            hours=$((hours+1))
-        else
-            echo "$minutes"
-        fi
-        minutes=$((minutes+1))
-    done
+    echo "Hour: $hours"
     minutes=1
+    while [[ $minutes -lt 60 ]]; do
+        echo "$minutes"
+        (( minutes++ ))
+    done
+    (( hours++ ))
 done
