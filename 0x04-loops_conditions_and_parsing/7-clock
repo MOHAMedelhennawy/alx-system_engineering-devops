@@ -4,10 +4,10 @@
 # - display minutes from 1 to 59
 
 hours=0
-while [[ $hours -le 13 ]]; do
+while [ $hours -le 13 ]; do
     echo "Hour: $hours"
     minutes=1
-    while [[ $minutes -lt 60 ]]; do
+    while [ $minutes -lt 60 ]; do
         echo "$minutes"
         (( minutes++ ))
     done
