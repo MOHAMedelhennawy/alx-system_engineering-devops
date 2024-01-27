@@ -6,5 +6,5 @@
 
 for file in "./"*
 do
-  printf "%s\n" "$file" | cut -d "-" -f 2
+  echo $file | cut -d "-" -f2
 done
