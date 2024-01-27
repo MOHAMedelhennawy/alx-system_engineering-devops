@@ -5,12 +5,10 @@ count=1
 while [ $count -le 10 ]; do
     if [[ count -eq 4 ]]; then
         echo "bad luck"
-        count=$(( count+1 ))
     elif [[ count -eq 8 ]]; then
         echo "good luck"
-        count=$(( count+1 ))
     else
         echo "Best School"
-        count=$(( count+1 ))
     fi
+        count=$(( count+1 ))
 done
