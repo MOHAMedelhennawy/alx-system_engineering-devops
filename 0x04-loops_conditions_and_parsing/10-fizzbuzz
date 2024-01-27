@@ -5,12 +5,12 @@
 #   Displays "Buzz" when the number is a multiple of 5.
 #   Otherwise, displays the number.
 
-for (( i=1; i<100; i++)); do
-    if (( i % 3 == 0 && i % 5 == 0 )); then
+for i in {1..100}; do
+    if [ $((i%3)) -eq 0 ] && [ $((i%5)) -eq 0 ]; then
         echo "FizzBuzz"
-    elif ((i % 3 == 0 )); then
+    elif [ $((i%3)) -eq 0 ]; then
         echo "Fizz"
-    elif ((i % 5 == 0 )); then
+    elif [ $((i%5)) -eq 0 ]; then
         echo "Buzz"
     else
         echo "$i"
