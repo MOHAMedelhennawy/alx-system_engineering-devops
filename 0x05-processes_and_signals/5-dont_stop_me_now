@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bash script that displays To infinity and beyond indefinitely.
+
+id=$(ps -e | grep -i 'bash' | cut -d " " -f1)
+
+kill $id
