@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Bash script that displays To infinity and beyond indefinitely.
+# Bash script that stops 4-to_infinity_and_beyond process.
 
 id=$(ps -e | grep -i 'bash' | cut -d " " -f1)
 
-kill $id
+kill "$id"
