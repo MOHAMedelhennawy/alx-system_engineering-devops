@@ -1,7 +1,6 @@
-# create a file in /tmp/school
+# create a file /tmp/school
 
-$file_path = '/tmp/school'
-file { $file_path:
+file { '/tmp/school':
     ensure  => file,
     mode    => '0744',
     owner   => 'www-data',
