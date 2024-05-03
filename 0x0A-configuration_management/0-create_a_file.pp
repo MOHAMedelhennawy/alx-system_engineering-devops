@@ -1,5 +1,6 @@
-$file_path = '/tmp/school'
+# create a file in /tmp/school
 
+$file_path = '/tmp/school'
 file { $file_path:
     ensure  => file,
     mode    => '0744',
