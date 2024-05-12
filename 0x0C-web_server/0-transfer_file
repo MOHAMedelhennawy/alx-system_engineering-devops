@@ -9,4 +9,4 @@ id_add=$2
 username=$3
 path_to_ssh_key=$4
 
-scp $path_to_file $username@$id_add:$4
+scp $path_to_file $username@$id_add:$path_to_ssh_key
