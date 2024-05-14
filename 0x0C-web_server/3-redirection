@@ -3,7 +3,7 @@
 
 old_string="# SSL configuration"
 new_string_file="new_string.txt"
-file="/etc/nginx/sites-available/default"
+file="/etc/nginx/sites-enabled/default"
 cat > "$new_string_file" <<EOL
 location /redirect_me {
     return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
