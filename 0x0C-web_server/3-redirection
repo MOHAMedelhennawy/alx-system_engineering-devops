@@ -10,8 +10,8 @@ location /redirect_me {
         }
 EOL
 
-sudo apt-get update
-sudo apt install nginx
+sudo apt-get -y update
+sudo apt install -y nginx
 sudo sed -i "/$old_string/{
 r $new_string_file
 d
