@@ -1,4 +1,5 @@
-#!/bin/env bash
+#!/usr/bin/env bash
+# Configure your Nginx server so that /redirect_me is redirecting to another page.
 
 old_string="# SSL configuration"
 new_string_file="new_string.txt"
