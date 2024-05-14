@@ -16,5 +16,5 @@ sudo sed -i "/$old_string/{
 r $new_string_file
 d
 }" $file
-sudo nginx -s reload
+service nginx start
 rm "$new_string_file"
