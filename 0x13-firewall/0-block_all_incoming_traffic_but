@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# a script that sets up the firewall via ufw
+sudo ufw default deny incoming
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw disable
+sudo ufw enable
