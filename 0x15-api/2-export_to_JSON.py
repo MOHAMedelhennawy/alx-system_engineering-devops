@@ -36,4 +36,4 @@ if __name__ == "__main__":
     user[userId] = tasks
     filename = '{}.json'.format(userId)
     with open(filename, 'w') as file:
-        json.dump(user, file, indent=2)
+        json.dump(user, file)
