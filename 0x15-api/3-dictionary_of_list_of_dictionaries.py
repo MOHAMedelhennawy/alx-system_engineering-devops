@@ -8,32 +8,31 @@ if __name__ == "__main__":
 
     import requests
     import json
-    import sys
 
-
+    dict = {}
     response_user = requests.get(
         "https://jsonplaceholder.typicode.com/users",
     )
 
-    all_users = response_user.json()
-    for user in all_users:
-        userId = response_user.json()[0]['id']
-        username = response_user.json()[0]['name']
+    users = response_user.json()
+    for user in users:
+        userId = user['id']
+        username = user['username']
+
         response_todo = requests.get(
             "https://jsonplaceholder.typicode.com/todos",
+            params={'userId': userId}
         )
 
-        todos_list = response_todo.json()
         tasks = [
             {
                 'task': task['title'],
                 'completed': task['completed'],
                 'username': username
-            } for task in todos_list
-            ]
+            } for task in response_todo.json()
+        ]
 
-        user = {}
-        user[userId] = tasks
-        filename = '{}.json'.format(userId)
-        with open('file.json', 'w') as file:
-            json.dump(user, file)
+        dict[userId] = tasks
+
+    with open('file.json', 'w') as file:
+        json.dump(dict, file)
