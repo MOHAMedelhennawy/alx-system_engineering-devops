@@ -32,6 +32,8 @@ if __name__ == "__main__":
         } for task in todos_list
         ]
     
-    data = {userId: tasks}
-    with open('file.json', 'w') as file:
-        json.dump(data, file)
+    user = {}
+    user[userId] = tasks
+    filename = '{}.json'.format(userId)
+    with open(filename, 'w') as file:
+        json.dump(user, file, indent=2)
