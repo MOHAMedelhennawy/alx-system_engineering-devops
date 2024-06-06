@@ -3,12 +3,12 @@
 returns information about his/her TODO list progress.
 """
 
-import requests
-import json
-import sys
-
 
 if __name__ == "__main__":
+
+    import requests
+    import json
+    import sys
 
     userId = sys.argv[1]
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
             'username': username
         } for task in todos_list
         ]
-    
+
     user = {}
     user[userId] = tasks
     filename = '{}.json'.format(userId)
