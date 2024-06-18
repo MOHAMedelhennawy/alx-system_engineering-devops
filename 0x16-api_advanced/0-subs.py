@@ -9,7 +9,7 @@ def number_of_subscribers(subreddit):
     headers = {'User-Agent': "My-User-Agent"}
 
     res = requests.get('https://oauth.reddit.com/r/{}/about.json'.format(subreddit),
-                       headers=headers)
+                       headers=headers, allow_redirects=False)
     if res.status_code != 200:
         return 0
     else:
